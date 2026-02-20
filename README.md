@@ -35,6 +35,8 @@ A FastAPI service that takes a GitHub repository URL and returns a human-readabl
 
 ## Design Decisions
 
+**Model choice:** GPT-3.5-turbo was chosen for its balance of speed, cost-efficiency, and ability to follow structured JSON instructions reliably. It is well-suited for this task as the summarization does not require the deeper reasoning of larger models like GPT-4.
+
 **File filtering:** Binary files, lock files, and dependency folders (`node_modules`, `venv`, `.git`, etc.) are skipped as they add noise without helping the LLM understand the project. Files like `.png`, `.jpg`, `.exe`, and `.pyc` are also excluded as they are unreadable by the LLM and waste context space.
 
 **File prioritization:** High-signal files (`README.md`, `main.py`, `app.py`, `package.json`, `requirements.txt`, `dockerfile`, etc.) are sorted to the front of the queue and sent to the LLM first. This ensures that even if the context budget runs out, the most informative files are always included.
