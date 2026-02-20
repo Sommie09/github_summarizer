@@ -53,7 +53,6 @@ class RepoRequest(BaseModel):
     github_url: str
 
 class RepoSummaryResponse(BaseModel):
-    repository: str
     summary: str
     technologies: List[str]
     structure: str
@@ -186,6 +185,5 @@ def summarize_repo(request: RepoRequest):
         error_response(500, "The AI returned an unexpected response. Please try again.")
 
     return {
-        "repository": f"{owner}/{repo}",
         **structured
     }
