@@ -37,7 +37,7 @@ POST /summarize
 **1. Clone this repo**
 ```bash
 git clone https://github.com/Sommie09/github_summarizer.git
-cd github-summarizer
+cd github_summarizer
 ```
 
 **2. Create and activate a virtual environment**
