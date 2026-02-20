@@ -6,7 +6,7 @@ A FastAPI service that takes a GitHub repository URL and returns a human-readabl
 
 1. Clone this repo and navigate into it:
 ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/Sommie09/github_summarizer.git
    cd github-summarizer
 ```
 
@@ -21,7 +21,7 @@ A FastAPI service that takes a GitHub repository URL and returns a human-readabl
    pip install -r requirements.txt
 ```
 
-4. Add your OpenAI API key — create a `.env` file:
+4. Create a .env file and add your OpenAI API key 
 ```
    OPENAI_API_KEY=your_key_here
 ```
