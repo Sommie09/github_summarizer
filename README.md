@@ -43,7 +43,9 @@ cd github_summarizer
 **2. Create and activate a virtual environment**
 ```bash
 python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
+
+Mac: source venv/bin/activate  
+Windows: venv\Scripts\activate
 ```
 
 **3. Install dependencies**
@@ -61,9 +63,7 @@ OPENAI_API_KEY=your_key_here
 uvicorn main:app --reload
 ```
 
-**6. Open the interactive docs at `http://127.0.0.1:8000/docs`**
-
-**Or test manually with curl:**
+**6. Test manually with curl**
 ```bash
 curl -X POST http://localhost:8000/summarize \
   -H "Content-Type: application/json" \
